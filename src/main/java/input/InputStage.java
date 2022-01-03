@@ -4,7 +4,7 @@ import static display_result.DisplayResult.displayResult;
 import static sarcina.StageOperator.stageOperator;
 import static sarcina.GetPrecedence.getPrecedence;
 import static sarcina.IdentifyOperator.isOperator;
-import static sarcina.prepareExpression.expresionFactoryPrepare;
+import static prepare_expression.prepareExpression.expresionFactoryPrepare;
 import static sarcina2.CalculatorConstructor.*;
 
 public class InputStage {
