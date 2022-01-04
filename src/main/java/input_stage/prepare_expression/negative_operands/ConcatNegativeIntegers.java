@@ -1,4 +1,4 @@
-package prepare_expression.negative_operands;
+package input_stage.prepare_expression.negative_operands;
 
 public class ConcatNegativeIntegers {
 

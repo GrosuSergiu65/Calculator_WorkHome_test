@@ -1,10 +1,7 @@
-package prepare_expression.implies_multiplication;
+package input_stage.prepare_expression.implies_multiplication;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
-import static prepare_expression.implies_multiplication.CleanRedundantParentheses.removeRedundantParentheses;
-import static prepare_expression.implies_multiplication.InsertMultiplication.insertMultiplication;
 
 public class MultiplicationNearParantheses {
 
@@ -15,8 +12,8 @@ public class MultiplicationNearParantheses {
 
         expressionList = new ArrayList<>(Arrays.asList(balancedWithNegativeNumber));
 
-        removeRedundantParentheses(expressionList);
-        insertMultiplication(expressionList);
+        CleanRedundantParentheses.removeRedundantParentheses(expressionList);
+        InsertMultiplication.insertMultiplication(expressionList);
 
         settledExpression = expressionList.toArray(new String[0]);
         return settledExpression;

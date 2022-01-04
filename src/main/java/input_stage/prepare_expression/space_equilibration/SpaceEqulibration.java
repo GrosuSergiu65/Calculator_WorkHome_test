@@ -1,4 +1,4 @@
-package prepare_expression.space_equilibration;
+package input_stage.prepare_expression.space_equilibration;
 
 public class SpaceEqulibration {
 

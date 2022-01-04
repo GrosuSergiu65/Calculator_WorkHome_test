@@ -1,4 +1,4 @@
-package prepare_expression.implies_multiplication;
+package input_stage.prepare_expression.implies_multiplication;
 
 import java.util.ArrayList;
 

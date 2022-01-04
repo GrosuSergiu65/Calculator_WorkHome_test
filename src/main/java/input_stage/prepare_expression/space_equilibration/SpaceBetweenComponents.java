@@ -1,6 +1,6 @@
-package prepare_expression.space_equilibration;
+package input_stage.prepare_expression.space_equilibration;
 
-import static prepare_expression.space_equilibration.SpaceEqulibration.putSpaceBetweenComponents;
+import static input_stage.prepare_expression.space_equilibration.SpaceEqulibration.putSpaceBetweenComponents;
 
 public class SpaceBetweenComponents {
 
