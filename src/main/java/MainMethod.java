@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-import static input.InputStage.processInput;
+import static input_stage.InputStage.processInput;
 
 public class MainMethod {
     public static void main(String[] args) {

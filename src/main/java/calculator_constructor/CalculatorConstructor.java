@@ -1,8 +1,9 @@
-package sarcina2;
+package calculator_constructor;
 
 import java.util.Stack;
 
 public class CalculatorConstructor {
+
     private static Stack<Character> operatorStack = new Stack<>();
     private static Stack<Double> valueStack = new Stack<>();
     private static boolean error;

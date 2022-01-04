@@ -1,7 +1,7 @@
 package display_result;
 
-import static sarcina2.CalculatorConstructor.getValueStack;
-import static sarcina2.CalculatorConstructor.isError;
+import static calculator_constructor.CalculatorConstructor.getValueStack;
+import static calculator_constructor.CalculatorConstructor.isError;
 
 public class DisplayResult {
 

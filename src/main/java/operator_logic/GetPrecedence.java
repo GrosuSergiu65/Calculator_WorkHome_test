@@ -1,4 +1,4 @@
-package sarcina;
+package operator_logic;
 
 public class GetPrecedence {
     public static int getPrecedence(char ch) {

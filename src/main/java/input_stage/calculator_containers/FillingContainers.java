@@ -1,18 +1,15 @@
-package input;
+package input_stage.calculator_containers;
 
-import static display_result.DisplayResult.displayResult;
-import static sarcina.StageOperator.stageOperator;
-import static sarcina.GetPrecedence.getPrecedence;
-import static sarcina.IdentifyOperator.isOperator;
-import static prepare_expression.prepareExpression.expresionFactoryPrepare;
-import static sarcina2.CalculatorConstructor.*;
+import static calculator_constructor.CalculatorConstructor.*;
+import static operator_logic.GetPrecedence.getPrecedence;
+import static operator_logic.IdentifyOperator.isOperator;
+import static operator_logic.StageOperator.stageOperator;
 
-public class InputStage {
-    public static void processInput(String input) {
+public class FillingContainers {
 
-        String[] arr = expresionFactoryPrepare(input);
+    public static void setFillingContainers(String[] expression) {
 
-        for (String nextToken : arr) {
+        for (String nextToken : expression) {
             char character = nextToken.charAt(0);
 
             if (character != '(' && character != ')' && character != '+' && character != '*' && character != '/'
@@ -46,13 +43,5 @@ public class InputStage {
                 }
             }
         }
-
-        while (!getOperatorStack().empty() && isOperator(getOperatorStack().peek())) {
-            char toProcess = getOperatorStack().peek();
-            getOperatorStack().pop();
-            stageOperator(toProcess, getValueStack());
-        }
-
-        displayResult();
     }
 }

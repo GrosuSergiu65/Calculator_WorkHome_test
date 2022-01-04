@@ -1,4 +1,4 @@
-package sarcina;
+package operator_logic;
 
 public class IdentifyOperator {
     public static boolean isOperator(char ch) {

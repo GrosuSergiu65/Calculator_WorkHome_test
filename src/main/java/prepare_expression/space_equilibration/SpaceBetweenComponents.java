@@ -3,11 +3,17 @@ package prepare_expression.space_equilibration;
 import static prepare_expression.space_equilibration.SpaceEqulibration.putSpaceBetweenComponents;
 
 public class SpaceBetweenComponents {
-    public static String runStraightenFreeSpace(String input) {
 
-        String filter = putSpaceBetweenComponents(input);
+    static String expression;
+    static String[] inflatedExpression;
 
-        return CleanDoubleSpace.removeSuperfluousSpace(filter);
+    public static String[] runStraightenFreeSpace(String input) {
+
+        expression = putSpaceBetweenComponents(input);
+        expression = CleanDoubleSpace.removeSuperfluousSpace(expression);
+        inflatedExpression = expression.split("\\s");
+
+        return inflatedExpression;
     }
 }
 
