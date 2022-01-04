@@ -12,7 +12,7 @@ public class MultiplicationNearParantheses {
 
         expressionList = new ArrayList<>(Arrays.asList(balancedWithNegativeNumber));
 
-        CleanRedundantParentheses.removeRedundantParentheses(expressionList);
+        CleanRedundantElements.removeRedundantParentheses(expressionList);
         InsertMultiplication.insertMultiplication(expressionList);
 
         settledExpression = expressionList.toArray(new String[0]);

@@ -5,6 +5,7 @@ public class HandleNegativeOperands {
   static String[] fixedArrayExpression;
 
     public static String[] sortNegativeOperands(String[] brokenArrayExpression) {
+
         fixedArrayExpression = ConcatNegativeIntegers.getConcatenateNegativeInteger(brokenArrayExpression);
         fixedArrayExpression = ExcludesNullsFromArray.getDeletedNulls(fixedArrayExpression);
 

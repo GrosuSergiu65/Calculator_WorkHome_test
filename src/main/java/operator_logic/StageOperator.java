@@ -1,45 +1,20 @@
 package operator_logic;
 
+import operator_logic.value_stack_logic.CalculateValue;
+import operator_logic.value_stack_logic.RetrievalValue;
+
 import java.util.Stack;
 
-import static calculator_constructor.CalculatorConstructor.setError;
-
 public class StageOperator {
+    private static double result = 0;
 
     public static void stageOperator(char operator, Stack<Double> valueStack) {
 
-        double a, b;
+        double b = RetrievalValue.getValueFromStack(valueStack);
+        double a = RetrievalValue.getValueFromStack(valueStack);
 
-        if (valueStack.empty()) {
-            setError(true);
-            return;
-        } else {
-            b = valueStack.peek();
-            valueStack.pop();
-        }
+        result = CalculateValue.getResult(operator, a, b, result);
 
-        if (valueStack.empty()) {
-            setError(true);
-            return;
-        } else {
-            a = valueStack.peek();
-            valueStack.pop();
-        }
-
-        double result = 0;
-
-        if (operator == '+') {
-            result = a + b;
-        } else if (operator == '-') {
-            result = a - b;
-        } else if (operator == '*') {
-            result = a * b;
-        } else if(operator == '/') {
-            result = a / b;
-        } else {
-            System.out.println("Calculator at this moment can't assume this kind of operation, please white for update and try again later!");
-            setError(true);
-        }
         valueStack.push(result);
     }
 }

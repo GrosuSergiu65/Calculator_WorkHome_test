@@ -13,7 +13,7 @@ public class MainMethod {
         } else {
             Scanner input = new Scanner(System.in);
 
-            System.out.print("The calculator will find the value of the given expression: ");
+            System.out.print("Calculator will find the value of the given expression: ");
             String userInput = input.nextLine();
 
             processInput(userInput);

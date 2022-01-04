@@ -2,11 +2,10 @@ package input_stage.calculator_containers;
 
 
 import calculator_constructor.CalculatorConstructor;
+import input_stage.CalculatorHearth;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
-import java.util.Arrays;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -20,7 +19,7 @@ class FillingContainersTest {
         String [] input = new String[1];
         input[0] = expression;
 
-    FillingContainers.setFillingContainers(input);
+    CalculatorHearth.setFillingContainers(input);
 
         boolean result = false;
         if(!CalculatorConstructor.getOperatorStack().isEmpty() || !CalculatorConstructor.getValueStack().isEmpty()){
