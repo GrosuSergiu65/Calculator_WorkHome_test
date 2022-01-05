@@ -13,8 +13,7 @@ public class RetrievalValue {
         if (valueStack.empty()) {
             setError(true);
         } else {
-            valueFromStack = valueStack.peek();
-            valueStack.pop();
+            valueFromStack = valueStack.pop();
         }
         return valueFromStack;
     }

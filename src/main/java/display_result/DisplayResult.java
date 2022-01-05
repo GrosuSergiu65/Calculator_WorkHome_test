@@ -1,7 +1,6 @@
 package display_result;
 
-import static calculator_constructor.CalculatorConstructor.getValueStack;
-import static calculator_constructor.CalculatorConstructor.isError;
+import static calculator_constructor.CalculatorConstructor.*;
 
 public class DisplayResult {
 
@@ -15,6 +14,7 @@ public class DisplayResult {
             result = getValueStack().peek();
             getValueStack().pop();
             System.out.print("The result is " +ANSI_RED+ result+ANSI_RESET);
+
         }
     }
 

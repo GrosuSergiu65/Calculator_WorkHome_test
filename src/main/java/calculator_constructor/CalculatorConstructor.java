@@ -16,8 +16,6 @@ public class CalculatorConstructor {
 
     public static Stack<Character> getOperatorStack() { return operatorStack; }
     public static Stack<Double> getValueStack() { return valueStack; }
-    public static void setOperatorStack(Stack<Character> operatorStack) {CalculatorConstructor.operatorStack = operatorStack;}
-    public static void setValueStack(Stack<Double> valueStack) {CalculatorConstructor.valueStack = valueStack;}
     public static boolean isError() { return error; }
     public static void setError(boolean error) { CalculatorConstructor.error = error; }
 }

@@ -6,9 +6,10 @@ import operator_logic.value_stack_logic.RetrievalValue;
 import java.util.Stack;
 
 public class StageOperator {
-    private static double result = 0;
+
 
     public static void stageOperator(char operator, Stack<Double> valueStack) {
+        double result = 0;
 
         double b = RetrievalValue.getValueFromStack(valueStack);
         double a = RetrievalValue.getValueFromStack(valueStack);
