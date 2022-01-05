@@ -1,20 +1,18 @@
 package operator_logic.value_stack_logic;
 
-import java.util.Stack;
+import calculator_constructor.Calculator;
 
-import static calculator_constructor.CalculatorConstructor.setError;
+import java.util.Stack;
 
 public class RetrievalValue {
 
-    static double valueFromStack;
-
-    public static double getValueFromStack(Stack<Double> valueStack) {
+    public static double getValueFromStack(Calculator calculator, Stack<Double> valueStack) {
 
         if (valueStack.empty()) {
-            setError(true);
+            calculator.setError(true);
+            return 0;
         } else {
-            valueFromStack = valueStack.pop();
+            return valueStack.pop();
         }
-        return valueFromStack;
     }
 }

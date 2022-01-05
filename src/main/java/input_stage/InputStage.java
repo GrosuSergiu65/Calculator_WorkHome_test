@@ -1,19 +1,27 @@
 package input_stage;
 
-import static display_result.DisplayResult.displayResult;
-import static input_stage.CalculatorHearth.setFillingContainers;
-import static input_stage.calculator_containers.ReleasingContainers.getReleasingOperatorContainer;
-import static input_stage.prepare_expression.prepareExpression.expressionFactoryPrepare;
+import calculator_constructor.Calculator;
+import display_result.DisplayResult;
+import input_stage.calculator_containers.ReleasingStacks;
+import input_stage.prepare_expression.PrepareExpression;
+
+import java.util.Stack;
 
 public class InputStage {
+    private final PrepareExpression prepare = new PrepareExpression();
+    private final ReleasingStacks releasingContainers = new ReleasingStacks();
+    private final CalculatorHearth calculatorHearth = new CalculatorHearth();
+    private final DisplayResult displayResult = new DisplayResult();
+    private final Stack<Character> operatorStack = new Stack<>();
+    private final Stack<Double> valueStack = new Stack<>();
 
-    static String[] expression;
+    public void processInput(String input) {
+        String[] expression = prepare.expressionFactoryPrepare(input);
 
-    public static void processInput(String input) {
+        Calculator calculator = new Calculator(operatorStack,valueStack, false);
 
-        expression = expressionFactoryPrepare(input);
-        setFillingContainers(expression);
-        getReleasingOperatorContainer();
-        displayResult();
+        calculatorHearth.setFillingContainers(calculator, expression);
+        releasingContainers.getReleasingOperatorStack(calculator);
+        displayResult.displayResult(calculator);
     }
 }

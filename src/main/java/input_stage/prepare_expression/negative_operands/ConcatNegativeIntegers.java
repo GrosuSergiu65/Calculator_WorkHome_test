@@ -2,9 +2,8 @@ package input_stage.prepare_expression.negative_operands;
 
 public class ConcatNegativeIntegers {
 
-    static String[] fixedArrayExpression;
-
-    protected static String[] getConcatenateNegativeInteger(String[] brokenArrayExpression) {
+    protected static String[] getConcatenatedNegativeValues(String[] brokenArrayExpression) {
+        String[] fixedArrayExpression;
 
     fixedArrayExpression = new String[brokenArrayExpression.length];
 

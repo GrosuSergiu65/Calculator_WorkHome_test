@@ -4,16 +4,10 @@ import static input_stage.prepare_expression.space_equilibration.SpaceEqulibrati
 
 public class SpaceBetweenComponents {
 
-    static String expression;
-    static String[] inflatedExpression;
-
     public static String[] runStraightenFreeSpace(String input) {
 
-        expression = putSpaceBetweenComponents(input);
-        expression = CleanDoubleSpace.removeSuperfluousSpace(expression);
-        inflatedExpression = expression.split("\\s");
-
-        return inflatedExpression;
+        String expression= putSpaceBetweenComponents(input);
+        return CleanDoubleSpace.removeSuperfluousSpace(expression).split("\\s");
     }
 }
 

@@ -1,40 +1,33 @@
 package input_stage.calculator_containers;
 
-import static calculator_constructor.CalculatorConstructor.*;
-import static input_stage.calculator_containers.ReleasingContainers.getReleasingValueContainer;
+import calculator_constructor.Calculator;
+
 import static operator_logic.IdentifyOperator.isOperator;
 
+public class FillingOperatorStack extends ReleasingStacks {
 
-public class FillingOperatorStack {
-static boolean isOperatorInStack;
-
-    public static boolean addOperatorToStack(char character) {
+    public void addOperatorToStack(Calculator calculator, char character) {
         if (isOperator(character)) {
-            getReleasingValueContainer(character);
-            getOperatorStack().push(character);
-            return !isOperatorInStack;
+            getReleasingValueStack(calculator, character);
+            calculator.getOperatorStack().push(character);
         }
-        return isOperatorInStack;
     }
 
-    public static boolean addOpenBracket(char character){
+    public void addOpenBracket(Calculator calculator, char character){
         if (character == '(') {
-            getOperatorStack().push(character);
-            return !isOperatorInStack;
+            calculator.getOperatorStack().push(character);
         }
-        return isOperatorInStack;
     }
 
-    public static boolean addCloseBracket(char character){
+    public void addCloseBracket(Calculator calculator, char character){
         if (character == ')') {
-            ReleasingContainers.getReleasingOperatorContainer();
-            if (!getOperatorStack().empty() && getOperatorStack().peek() == '(') {
-                getOperatorStack().pop();
+            getReleasingOperatorStack(calculator);
+            if (!calculator.getOperatorStack().empty() && calculator.getOperatorStack().peek() == '(') {
+                calculator.getOperatorStack().pop();
             } else {
                 System.out.println("Error: unbalanced parenthesis.");
-                setError(true);
+                calculator.setError(true);
             }
         }
-        return isOperatorInStack;
     }
 }
