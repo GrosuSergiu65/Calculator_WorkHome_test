@@ -15,13 +15,15 @@ public class InputStage {
     private final Stack<Character> operatorStack = new Stack<>();
     private final Stack<Double> valueStack = new Stack<>();
 
-    public void processInput(String input) {
+    public double processInput(String input) {
+
         String[] expression = prepare.expressionFactoryPrepare(input);
 
         Calculator calculator = new Calculator(operatorStack,valueStack, false);
 
         calculatorHearth.setFillingContainers(calculator, expression);
         releasingContainers.getReleasingOperatorStack(calculator);
-        displayResult.displayResult(calculator);
+
+        return displayResult.displayResult(calculator);
     }
 }

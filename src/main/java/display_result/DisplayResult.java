@@ -1,8 +1,6 @@
 package display_result;
 
 import calculator_constructor.Calculator;
-import input_stage.InputStage;
-
 import java.util.EmptyStackException;
 
 public class DisplayResult{
@@ -12,7 +10,7 @@ public class DisplayResult{
     private static final String ANSI_CYAN = "\u001B[36m";
     private double result;
 
-    public void displayResult(Calculator calculator) {
+    public double displayResult(Calculator calculator) {
         DisplayResult displayResult = new DisplayResult();
 
         if (!calculator.isError()) {
@@ -23,7 +21,8 @@ public class DisplayResult{
                 System.err.print("\n" + e);
                 System.out.print(ANSI_CYAN + "Please verify if the expression is written correct" + ANSI_RESET);
             }
-        }
+        } else {System.out.println(ANSI_CYAN + "Please verify if the expression is written correct" + ANSI_RESET); return -1;}
+        return displayResult.getResult();
     }
 
     public double getResult() {return result;}

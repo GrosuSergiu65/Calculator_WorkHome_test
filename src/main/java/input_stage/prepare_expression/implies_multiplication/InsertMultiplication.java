@@ -14,7 +14,7 @@ public class InsertMultiplication {
                 if (expressionList.get(index).equals("(") && expressionList.get(index - 1).equals(operands[operandsIndex]))
                 {break; }
 
-                if (expressionList.get(index).equals("(") && !expressionList.get(index - 1).equals(operands[operandsIndex]))
+                if (expressionList.get(index).equals("(") && !expressionList.get(index - 1).matches("[-+*/]" ))
                 {expressionList.add(index, ("*"));  index +=1 ; break;}
 
                 if (expressionList.get(index).equals("(") && expressionList.get(index - 1).equals(")"))

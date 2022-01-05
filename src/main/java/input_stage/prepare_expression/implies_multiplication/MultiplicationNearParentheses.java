@@ -10,7 +10,6 @@ public class MultiplicationNearParentheses {
 
         CleanRedundantElements.removeRedundantParentheses(expressionList);
         InsertMultiplication.insertMultiplication(expressionList);
-
         return expressionList.toArray(new String[0]);
     }
 }

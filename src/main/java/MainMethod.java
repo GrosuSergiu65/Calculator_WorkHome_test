@@ -20,6 +20,7 @@ public class MainMethod {
             String userInput = scan.nextLine();
 
             input.processInput(userInput);
+
         }
     }
 }

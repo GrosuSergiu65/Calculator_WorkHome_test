@@ -1,10 +1,10 @@
 package input_stage.prepare_expression.space_equilibration;
 
 public class CleanDoubleSpace {
-
-    static String expression = "";
+    private final String expression = "";
 
     protected static String removeSuperfluousSpace(String input) {
+        String expression = "";
         for (int index = 0; index < input.trim().length(); index++) {
 
             if (input.charAt(index) == ' ' && input.charAt(index + 1) ==' ') {

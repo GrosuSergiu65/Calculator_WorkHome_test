@@ -11,8 +11,7 @@ public class RetrievalValue {
         if (valueStack.empty()) {
             calculator.setError(true);
             return 0;
-        } else {
-            return valueStack.pop();
         }
+        return valueStack.pop();
     }
 }
