@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: operator_logic.IdentifyOperatorTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in operator_logic.IdentifyOperatorTest

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: operator_logic.value_stack_logic.RetrievalValueTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in operator_logic.value_stack_logic.RetrievalValueTest

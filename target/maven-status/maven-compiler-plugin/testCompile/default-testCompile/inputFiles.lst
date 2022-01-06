@@ -1,0 +1,13 @@
+/root/IdeaProjects/Calculator_WorkHome_test/src/test/java/input_stage/prepare_expression/space_equilibration/CleanDoubleSpaceTest.java
+/root/IdeaProjects/Calculator_WorkHome_test/src/test/java/operator_logic/IdentifyOperatorTest.java
+/root/IdeaProjects/Calculator_WorkHome_test/src/test/java/display_result/DisplayResultTest.java
+/root/IdeaProjects/Calculator_WorkHome_test/src/test/java/input_stage/InputStageTest.java
+/root/IdeaProjects/Calculator_WorkHome_test/src/test/java/operator_logic/value_stack_logic/RetrievalValueTest.java
+/root/IdeaProjects/Calculator_WorkHome_test/src/test/java/operator_logic/value_stack_logic/CalculateValueTest.java
+/root/IdeaProjects/Calculator_WorkHome_test/src/test/java/input_stage/calculator_containers/FillingValueStackTest.java
+/root/IdeaProjects/Calculator_WorkHome_test/src/test/java/input_stage/calculator_containers/FillingOperatorStackTest.java
+/root/IdeaProjects/Calculator_WorkHome_test/src/test/java/input_stage/prepare_expression/implies_multiplication/MultiplicationNearParenthesesTest.java
+/root/IdeaProjects/Calculator_WorkHome_test/src/test/java/input_stage/prepare_expression/implies_multiplication/InsertMultiplicationTest.java
+/root/IdeaProjects/Calculator_WorkHome_test/src/test/java/operator_logic/StageOperatorTest.java
+/root/IdeaProjects/Calculator_WorkHome_test/src/test/java/input_stage/prepare_expression/implies_multiplication/CleanRedundantElementsTest.java
+/root/IdeaProjects/Calculator_WorkHome_test/src/test/java/operator_logic/GetPrecedenceTest.java
